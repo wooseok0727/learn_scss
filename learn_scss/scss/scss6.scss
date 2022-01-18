@@ -1,0 +1,27 @@
+/* Mixins (재활용) */
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin box($size: 100px, $color: tomato) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+}
+
+.container {
+  @include center;
+  @include box(200px, red);
+  .item {
+    @include center;
+    @include box($color: green); // 키워드 인수
+  }
+}
+
+.box {
+  @include center;
+  @include box;
+}

@@ -1,0 +1,14 @@
+/* 변수(Variables) */
+
+.container {
+  $size: 200px;
+  position: fixed;
+  top: $size;
+  .item {
+    $size: 100px;
+    width: $size;
+    height: $size;
+    transform: translateX($size);
+  }
+  left: $size; // 100px
+}

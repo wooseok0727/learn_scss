@@ -1,0 +1,19 @@
+/* 중첩된 속성 */
+
+.box {
+  font: {
+    weight: bold;
+    size: 10px;
+    family: sans-serif;
+  }
+  margin: {
+    top: 10px;
+    left: 20px;
+  }
+  padding: {
+    top: 10px;
+    bottom: 40px;
+    left: 20px;
+    right: 30px;
+  }
+}

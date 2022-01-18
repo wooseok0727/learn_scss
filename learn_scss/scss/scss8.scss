@@ -1,0 +1,25 @@
+/* import */
+@import './scss1', './scss2';
+
+/* 색상 내장 함수 */
+.box {
+  $color: royalblue;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: $color;
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+  &.built-in {
+    background-color: mix($color, red);
+    background-color: lighten($color, 10%);
+    background-color: darken($color, 10%);
+    background-color: saturate($color, 40%);
+    background-color: desaturate($color, 40%);
+    background-color: grayscale($color);
+    background-color: invert($color);
+    background-color: rgba($color, 0.5);
+  }
+}

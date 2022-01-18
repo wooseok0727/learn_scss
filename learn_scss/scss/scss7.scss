@@ -1,0 +1,25 @@
+/* 반복문 */
+
+@for $i from 1 through 10 {
+  .item:nth-child(#{$i}) {
+    width: 100px * $i;
+  }
+}
+
+/* 함수 */
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function ratio($size, $ratio) {
+  @return $size * $ratio;
+}
+
+.box {
+  $width: 160px;
+  width: $width;
+  height: ratio($width, 9/16); // 90px  16:9
+  @include center;
+}
